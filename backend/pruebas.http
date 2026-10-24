@@ -1,0 +1,66 @@
+### 1. Crear equipo (esperado: 201)
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "codigoInventario": "NB-001",
+  "nombre": "Notebook Dell Latitude",
+  "tipo": "Notebook",
+  "marca": "Dell",
+  "modelo": "Latitude 5420",
+  "ubicacion": "Oficina 101",
+  "estado": "Disponible",
+  "fechaAdquisicion": "2025-03-15",
+  "observaciones": "Equipo nuevo"
+}
+
+### 2. Listar todos (esperado: 200)
+GET http://localhost:3000/equipos
+
+### 3. Obtener uno por ID (esperado: 200)
+GET http://localhost:3000/equipos/1
+
+### 4. Actualizar solo el estado (esperado: 200)
+PATCH http://localhost:3000/equipos/1
+Content-Type: application/json
+
+{
+  "estado": "En uso"
+}
+
+### 5. ID inexistente (esperado: 404)
+GET http://localhost:3000/equipos/999
+
+### 6. Estado inválido y nombre corto (esperado: 400)
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "codigoInventario": "NB-002",
+  "nombre": "ab",
+  "tipo": "Notebook",
+  "marca": "HP",
+  "modelo": "ProBook",
+  "ubicacion": "Oficina 102",
+  "estado": "Roto",
+  "fechaAdquisicion": "2025-03-15"
+}
+
+### 7. Campo no declarado "color" (esperado: 201, sin guardar "color")
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "codigoInventario": "MN-001",
+  "nombre": "Monitor Samsung 24",
+  "tipo": "Monitor",
+  "marca": "Samsung",
+  "modelo": "S24",
+  "ubicacion": "Oficina 101",
+  "estado": "Disponible",
+  "fechaAdquisicion": "2025-04-10",
+  "color": "negro"
+}
+
+### 8. Eliminar (esperado: 200)
+DELETE http://localhost:3000/equipos/1
