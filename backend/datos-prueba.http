@@ -1,0 +1,77 @@
+### Equipo 1
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "codigoInventario": "NB-001",
+  "nombre": "Notebook Dell Latitude",
+  "tipo": "Notebook",
+  "marca": "Dell",
+  "modelo": "Latitude 5420",
+  "ubicacion": "Oficina 101",
+  "estado": "En uso",
+  "fechaAdquisicion": "2025-03-15",
+  "observaciones": "Asignado a secretaría académica"
+}
+
+### Equipo 2
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "codigoInventario": "PC-001",
+  "nombre": "PC de escritorio HP",
+  "tipo": "PC",
+  "marca": "HP",
+  "modelo": "ProDesk 400 G7",
+  "ubicacion": "Laboratorio 1",
+  "estado": "Disponible",
+  "fechaAdquisicion": "2024-08-20"
+}
+
+### Equipo 3
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "codigoInventario": "MN-001",
+  "nombre": "Monitor Samsung 24 pulgadas",
+  "tipo": "Monitor",
+  "marca": "Samsung",
+  "modelo": "S24R350",
+  "ubicacion": "Laboratorio 1",
+  "estado": "Disponible",
+  "fechaAdquisicion": "2024-08-20"
+}
+
+### Equipo 4
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "codigoInventario": "PY-001",
+  "nombre": "Proyector Epson",
+  "tipo": "Proyector",
+  "marca": "Epson",
+  "modelo": "PowerLite X49",
+  "ubicacion": "Sala de reuniones",
+  "estado": "Mantención",
+  "fechaAdquisicion": "2022-11-05",
+  "observaciones": "Lámpara en reemplazo"
+}
+
+### Equipo 5
+POST http://localhost:3000/equipos
+Content-Type: application/json
+
+{
+  "codigoInventario": "NB-002",
+  "nombre": "Notebook Lenovo ThinkPad",
+  "tipo": "Notebook",
+  "marca": "Lenovo",
+  "modelo": "ThinkPad E14",
+  "ubicacion": "Bodega",
+  "estado": "Baja",
+  "fechaAdquisicion": "2019-06-12",
+  "observaciones": "Pantalla dañada, sin reparación"
+}
