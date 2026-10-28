@@ -1,0 +1,1 @@
+export const ESTADOS = ['Disponible', 'En uso', 'Mantención', 'Baja']
